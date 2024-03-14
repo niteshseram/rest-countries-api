@@ -1,6 +1,10 @@
-import styled from "styled-components";
 import Container from "../components/Container";
+import Filter from "../components/Filter";
 
 export default function Home() {
-  return <Container>Hello</Container>;
+  return (
+    <Container>
+      <Filter />
+    </Container>
+  );
 }

@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 
 import GlobalStyles from "./Global.styled";
 import { darkTheme, lightTheme } from "./themes";
+import CountriesProvider from "./context/CountriesContext";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -17,16 +18,18 @@ function App() {
 
   return (
     <div className="app">
-      <BrowserRouter>
-        <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-          <GlobalStyles />
-          <Navbar onToggle={toggleTheme} theme={theme} />
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/country" exact element={<Country />} />
-          </Routes>
-        </ThemeProvider>
-      </BrowserRouter>
+      <CountriesProvider>
+        <BrowserRouter>
+          <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+            <GlobalStyles />
+            <Navbar onToggle={toggleTheme} theme={theme} />
+            <Routes>
+              <Route path="/" exact element={<Home />} />
+              <Route path="/country" exact element={<Country />} />
+            </Routes>
+          </ThemeProvider>
+        </BrowserRouter>
+      </CountriesProvider>
     </div>
   );
 }

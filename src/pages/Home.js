@@ -1,3 +1,6 @@
+import styled from "styled-components";
+import Container from "../components/Container";
+
 export default function Home() {
-  return <div>Hello</div>;
+  return <Container>Hello</Container>;
 }

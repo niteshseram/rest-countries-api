@@ -1,3 +1,5 @@
+import Container from "../components/Container";
+
 export default function Country() {
-  return <div>Country</div>;
+  return <Container>Country</Container>;
 }

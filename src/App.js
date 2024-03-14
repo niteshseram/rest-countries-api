@@ -25,7 +25,7 @@ function App() {
             <Navbar onToggle={toggleTheme} theme={theme} />
             <Routes>
               <Route path="/" exact element={<Home />} />
-              <Route path="/country" exact element={<Country />} />
+              <Route path="/:country" exact element={<Country />} />
             </Routes>
           </ThemeProvider>
         </BrowserRouter>

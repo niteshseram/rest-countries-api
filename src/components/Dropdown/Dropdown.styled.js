@@ -41,7 +41,7 @@ export const DropdownBox = styled.div`
   width: 100%;
   background: ${(props) => props.theme.colors.elements};
   border-radius: 5px;
-  z-index: 5;
+  z-index: 3;
   padding: 1rem 1.5rem;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
   margin-top: 0.25rem;
@@ -60,7 +60,7 @@ export const DropdownItem = styled.button`
   font-size: inherit;
   cursor: pointer;
   text-align: start;
-  z-index: 5;
+  z-index: 3;
   &:hover {
     font-weight: 600;
   }
@@ -72,7 +72,7 @@ export const DropdownBack = styled.button`
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 3;
+  z-index: 2;
   top: 0;
   right: 0;
   display: ${(props) => props.display};
